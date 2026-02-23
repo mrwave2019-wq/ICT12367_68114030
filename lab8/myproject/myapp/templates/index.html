@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block title %}
+หน้าแรก
+{% endblock %}
+
+{% block hero %}
+<section class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="fw-bold">
+            ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367
+        </h1>
+    </div>
+</section>
+
+<style>
+.hero-section {
+    background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+    height: 350px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <h4 class="text-primary fw-bold mb-4">
+        ยินดีต้อนรับสู่รายวิชา ICT12367 การพัฒนาเว็บแอปพลิเคชันด้วยภาษาไพธอน
+    </h4>
+
+    <!-- Section 1 -->
+    <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                     class="img-fluid rounded-start"
+                     style="height:150px; width: 300px;object-fit:cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">สินค้า</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur, dignissimos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                     class="img-fluid rounded-start"
+                     style="height:150px; width: 300px;object-fit:cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">บริการ</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur, dignissimos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="card mb-4 shadow-sm">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                     class="img-fluid rounded-start"
+                     style="height:150px; width: 300px;object-fit:cover;">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">เกี่ยวกับเรา</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequuntur, dignissimos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="fw-bold mb-3">แสดงแผนที่ใน Google Map</h5>
+
+            <iframe
+                src="https://www.google.com/maps?q=Bangkok&output=embed"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+</div>
+
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    © 2024 ICT12367 SPU | Information Technology
+</footer>
+
+{% endblock %}
