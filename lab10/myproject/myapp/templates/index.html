@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}
+หน้าแรก
+{% endblock %}
+
+{% block hero %}
+<section class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="fw-bold">
+            ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367
+        </h1>
+    </div>
+</section>
+
+<style>
+.hero-section {
+    background: url("https://www.eef.or.th/wp-content/uploads/2018/06/bg-focus-area@2x-1.png") center/cover no-repeat;
+    height: 350px;
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <h4 class="text-primary fw-bold mb-4">
+        ยินดีต้อนรับสู่รายวิชา ICT12367 การพัฒนาเว็บแอปพลิเคชันด้วยภาษาไพธอน
+    </h4>
+
+<table class="table table-hover">
+<thead>
+    <tr>
+        <th scope="col">รหัสประชากร</th>
+        <th scope="col">ชื่อประชากร</th>
+        <th scope="col">อายุ</th>
+        <th scope="col">แก้ไข</th>
+        <th scope="col">ลบ</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in all_person %}
+        <tr>
+            <th scope="row">{{person.id}}</th>
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td><a href="#" class="btn btn-warning">แก้ไข</a></td>
+            <td><a href="#" class="btn btn-danger">ลบ</a></td>
+             </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+{% endblock %}
